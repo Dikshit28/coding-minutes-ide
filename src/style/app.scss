@@ -13,6 +13,7 @@
 
 // Variables
 $accent-color-green: #7ac25b;
+$accent-color-dark-green: #4b7a37;
 $accent-color-purple: #5848ea;
 $accent-color-pink: #9549eb;
 
@@ -312,11 +313,11 @@ button {
       }
 
       &--hidden ~ .open-io-button {
-        background: $accent-color-green;
+        background-image: linear-gradient(90deg, $accent-color-green, $accent-color-dark-green);
         right: calc(3rem - 10px);
 
         .open-io-button__icon {
-          transform: rotate(180deg);
+          transform: translate(-5%,0%) rotate(180deg);
         }
       }
     }
@@ -399,10 +400,13 @@ button {
       align-items: center;
       justify-content: center;
       z-index: 100;
+      background-image: linear-gradient(270deg, $accent-color-green, $accent-color-dark-green);
       border: 1px solid $accent-color-green;
       transition: all 0.75s;
 
       &__icon {
+        transform: translate(5%,0%);
+        padding: 30%;
         transition: all 0.75s;
       }
 
