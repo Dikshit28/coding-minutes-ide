@@ -55,6 +55,13 @@ export const MainView: React.FC = () => {
       }, 2000);
     }
   }, [state]);
+  const IconMap = {
+    idle: 'https://minio.codingminutes.com/assets/play-white.svg',
+    correct: 'https://minio.codingminutes.com/assets/play-white.svg',
+    error: 'https://minio.codingminutes.com/assets/play-white.svg',
+  };
+  
+  const icon = IconMap[props.state];
 
   return (
     <>
@@ -72,7 +79,7 @@ export const MainView: React.FC = () => {
           <IONav className={isIOOpen ? '' : 'io-section--hidden'} />
           <RunFAB state={state} />
           <div className="open-io-button" onClick={toggleIO}>
-            <div className="open-io-button__icon">&gt;</div>
+            <img src={icon} style={{ height: '100%', width: '100%' }} className="open-io-button__icon" />
 
             {/* <div className="open-io-button__tooltip">Toggle I/O pane</div> */}
           </div>
